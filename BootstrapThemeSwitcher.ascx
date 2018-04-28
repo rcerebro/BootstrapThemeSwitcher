@@ -34,7 +34,7 @@
 </script>
 
 <div class="pull-right">
-    <dx:BootstrapButton ID="BootstrapButton1" runat="server" Text="Show theme selector" AutoPostBack="false">
+    <dx:BootstrapButton ID="BootstrapButton1" runat="server" Text="Temas" AutoPostBack="false">
         <ClientSideEvents Click="showThemeSelector" />
     </dx:BootstrapButton>
 </div>
@@ -43,7 +43,7 @@
 </dx:ASPxHiddenField>
 
 <section id="settingsbar">
-    <h5>Color Themes</h5>
+    <h5>Cor dos Temas</h5>
     <dx:BootstrapMenu runat="server" ID="themesMenu" ClientIDMode="Static" AllowSelectItem="true">
         <ClientSideEvents ItemClick="onThemeItemClick" />
     </dx:BootstrapMenu>
