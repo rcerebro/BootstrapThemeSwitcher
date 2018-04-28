@@ -1,12 +1,15 @@
-BootstrapChart - How to bind to filtered or sorted ASPxGridView data on the server side at runtime
-This example demonstrates how to show filtered or sorted ASPxGridView data in BootstrapChart on a callback at runtime by using server side data binding.
+Bootstrap Controls - How to implement Theme Switcher
+This example demonstrates the way of creating a Bootstrap Theme Switcher User Control as in Devexpress Bootstrap demos (all themes are taken from the Bootswatch web site).
+The selected theme name is stored in cookies.
+HOW TO APPLY:
+1. Add all three files in App_Code directory: BootstrapThemeModel.cs, BundleConfig.cs, ThemeModelBase.cs;
+2. Add User Control BootstrapThemeSwitcher and register and add it on the page. In this example, it's registered and added on the Master Page Site.master; 
+3. Add the SwitcherResources folder. It contains the Content and Scripts folders, the client resources for Theme Switcher User Control and Themes.xml file which contains the list of Bootstrap Themes.
+After performing all actions above, you will have an attractive Theme Switcher like in our demos.
+Description
+BootstrapThemeSwitcher User Control contains an attribute ThemeLinkID and requires the value of the link's element id which is responsible for representing the current theme.
+ThemeLinkID is connected with BootstrapThemeSwitcher's ASPxHiddenField and this value is used for changing the theme on the client side.
 
-In page markup, enable ASPxGridView’s ShowFilterRow property to show FilterRow in it. Handle the DataBound event on the first page load to bind BootstrapChart data to ASPxGridView data. Use the VisibleRowCount property to determine what ASPxGridView data is not filtered. Set the ValueType property of the ValueAxisCollection.BootstrapChartValueAxis settings to enable sorting of against BootstrapChart's ValueAxis values.
 
-Handle the ASPxClientGridView.BeginCallback event to save the callback command name in the javascript variable. Then handle ASPxClientGridView's EndCallback to check the callback command name and perform a callback if the condition is satisfied (the command name is "APPLYCOLUMNFILTER" or "SORT").
-
-Put the BootstrapChart to ASPxCallbackPanel to update its data source on the server side after a callback. Then, handle ASPxCallbackPanel's Callback event to get the filtered or sorted ASPxGridView data, convert it to BootstrapChart's data format and bind to BootstrapChart on the server side on a callback.
-
-
-
-SOURCE:https://github.com/DevExpress-Examples/bootstrapchart-how-to-bind-to-filtered-or-sorted-aspxgridview-data-on-the-server-side-at-r-t556711
+Credits: Team DevExpress
+Source: https://github.com/DevExpress-Examples/bootstrap-controls-how-to-implement-theme-switcher-t547560
